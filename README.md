@@ -1,10 +1,12 @@
-# d3.layout.grid
+# d3-grid
 
-A grid layout for [D3](http://d3js.org). The grid layout takes a one-dimensional array of data and arranges it on a two-dimensional grid.
+A grid layout for [D3](http://d3js.org)v4.
+
+The grid layout takes a one-dimensional array of data and arranges it on a two-dimensional grid.
 
 ## API
 
-<a name="layout-grid" href="#layout-grid">#</a> d3.layout.<b>grid</b>()
+<a name="layout-grid" href="#layout-grid">#</a> d3.<b>grid</b>()
 
 Constructs a new grid layout.
 
@@ -17,20 +19,21 @@ Computes the layout for <i>nodes</i>. Per default, the layout tries to keep the 
 
 <a name="points" href="#points">#</a> grid.<b>points</b>()
 
-Configure the grid to treat nodes as points, cf. [d3.scale.ordinal().rangePoints()](https://github.com/mbostock/d3/wiki/Ordinal-Scales#wiki-ordinal_rangePoints).
+Configure the grid to treat nodes as points, cf. [d3.scalePoints().range()](https://github.com/d3/d3-scale#point-scales).
+
 
 <a name="bands" href="#bands">#</a> grid.<b>bands</b>()
 
-Configure the grid to treat nodes as bands, cf. [d3.scale.ordinal().rangeBands()](https://github.com/mbostock/d3/wiki/Ordinal-Scales#wiki-ordinal_rangeBands)
+Configure the grid to treat nodes as bands, cf. [d3.scaleBand().range()](https://github.com/d3/d3-scale#band-scales).
 
 <a name="padding" href="#padding">#</a> grid.<b>padding</b>([<i>padding</i>])
 
-Specify the <i>padding</i> between the node bands as [<i>x</i>, <i>y</i>]. <i>x</i> and <i>y</i> are relative to the band width/height, similar to the <i>padding</i> parameter of [d3.scale.ordinal().rangeBands()](https://github.com/mbostock/d3/wiki/Ordinal-Scales#wiki-ordinal_rangeBands).
+Specify the <i>padding</i> between the node bands as [<i>x</i>, <i>y</i>]. <i>x</i> and <i>y</i> are relative to the band width/height, similar to the <i>padding</i> parameter of [d3.scaleBand().range()](https://github.com/mbostock/d3/wiki/Ordinal-Scales#wiki-ordinal_rangeBands).
 
 If [nodeSize](#nodeSize) is set, <i>padding</i> is absolute. For example, to configure a grid layout for nodes with 100×100px size, and 20px horizontal and vertical padding, use:
 
 ```javascript
-var grid = d3.layout.grid()
+var grid = d3.grid()
   .nodeSize([100, 100])
   .padding([20, 20]);
 ```
@@ -59,14 +62,17 @@ If <i>nodeSize</i> is set, returns the current <i>nodeSize</i>.
 
 If instead [size](#size) is set, returns the actual size of a node <i>after</i> [grid](#grid) has been called.
 
-
 ## Examples
 
-* [Grid layout demo](http://bl.ocks.org/herrstucki/5684816)
+* [Grid layout demo](http://bl.ocks.org/basilesimon/dbb876d063f2b0475824dbd6b16c251f)
 
 ## Author
 
 Jeremy Stucki, [Interactive Things](http://interactivethings.com)
+
+## Contributors
+
+Basile Simon, [@basilesimon](https://twitter.com/basilesimon)
 
 ## License
 

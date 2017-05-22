@@ -1,24 +1,27 @@
 {
   "name": "d3-grid",
-  "version": "0.1.1",
-  "description": "Grid layout for D3",
+  "version": "0.2",
+  "description": "Grid layout for D3v4",
   "main": "d3-grid.js",
   "scripts": {
     "test": "node_modules/.bin/vows --spec"
   },
-  "repository": "https://github.com/interactivethings/d3-grid.git",
+  "repository": "https://github.com/basilesimon/d3-grid.git",
   "keywords": [
     "d3",
     "layout",
     "grid"
   ],
-  "author": {
+  "author": [{
     "name": "Jeremy Stucki",
     "url": "http://interactivethings.com"
-  },
+  }, {
+    "name": "Basile Simon",
+    "url": "https://twitter.com/basilesimon"
+  }],
   "license": "BSD",
   "dependencies": {
-    "d3": "~3.1.5"
+    "d3": "~4.9"
   },
   "devDependencies": {
     "vows": "~0.7.0"
