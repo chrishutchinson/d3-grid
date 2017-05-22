@@ -12,16 +12,17 @@
     "layout",
     "grid"
   ],
-  "author": [{
+  "author": {
     "name": "Jeremy Stucki",
     "url": "http://interactivethings.com"
-  }, {
+  },
+  "constributors": [{
     "name": "Basile Simon",
     "url": "https://twitter.com/basilesimon"
   }],
   "license": "BSD",
   "dependencies": {
-    "d3": "~4.9"
+    "d3-scale": "^1.0.6"
   },
   "devDependencies": {
     "vows": "~0.7.0"
