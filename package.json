@@ -1,12 +1,12 @@
 {
   "name": "d3-grid",
-  "version": "0.2",
+  "version": "0.2.0",
   "description": "Grid layout for D3v4",
   "main": "d3-grid.js",
   "module": "index",
   "jsnext:main": "index",
   "scripts": {
-    "test": "node_modules/.bin/vows --spec"
+    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-grid.js -- index.js"
   },
   "repository": "https://github.com/interactivethings/d3-grid.git",
   "keywords": [
@@ -18,14 +18,13 @@
     "name": "Jeremy Stucki",
     "url": "http://interactivethings.com"
   },
-  "constributors": [{
-    "name": "Basile Simon",
-    "url": "https://twitter.com/basilesimon"
-  }],
-  "license": "BSD",
-  "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-grid.js -- index.js",
-  },
+  "constributors": [
+    {
+      "name": "Basile Simon",
+      "url": "https://twitter.com/basilesimon"
+    }
+  ],
+  "license": "BSD-3-Clause",
   "dependencies": {
     "d3-scale": "^1.0.6"
   },
