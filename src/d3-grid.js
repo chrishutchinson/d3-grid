@@ -1,4 +1,4 @@
-module.exports = function() {
+export default function() {
   var mode = 'equal',
     layout = _distributeEqually,
     x = d3.scaleOrdinal(),
