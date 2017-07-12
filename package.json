@@ -3,10 +3,12 @@
   "version": "0.2",
   "description": "Grid layout for D3v4",
   "main": "d3-grid.js",
+  "module": "index",
+  "jsnext:main": "index",
   "scripts": {
     "test": "node_modules/.bin/vows --spec"
   },
-  "repository": "https://github.com/basilesimon/d3-grid.git",
+  "repository": "https://github.com/interactivethings/d3-grid.git",
   "keywords": [
     "d3",
     "layout",
@@ -21,6 +23,9 @@
     "url": "https://twitter.com/basilesimon"
   }],
   "license": "BSD",
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-grid.js -- index.js",
+  },
   "dependencies": {
     "d3-scale": "^1.0.6"
   },
