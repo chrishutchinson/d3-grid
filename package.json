@@ -6,7 +6,8 @@
   "module": "index",
   "jsnext:main": "index",
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-grid.js -- index.js"
+    "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-grid.js -- index.js",
+    "test": "vows test/*"
   },
   "repository": "https://github.com/interactivethings/d3-grid.git",
   "keywords": [
@@ -29,6 +30,9 @@
     "d3-scale": "^1.0.6"
   },
   "devDependencies": {
+    "d3": "^4",
+    "package-preamble": "0.0",
+    "rollup": "0.41",
     "vows": "~0.7.0"
   }
 }

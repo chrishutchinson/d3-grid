@@ -2,14 +2,14 @@ var vows = require('vows'), assert = require('assert');
 
 d3 = require('d3');
 
-var grid = require('../d3-grid.js');
+var grid = require('../src/d3-grid.js');
 
 vows
   .describe('d3.grid')
   .addBatch({
     'Grid layout': {
       topic: function() {
-        return d3.layout.grid;
+        return d3.grid;
       },
       'equally distributes 4 nodes within a 1x1 space, left to right, top to bottom': function(
         grid
